@@ -1,0 +1,10 @@
+{
+    "name": "0wikipedia",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Otomatik olarak 0wikipedia.org'a yönlendiren eklenti.",
+    "permissions": ["*://*.wikipedia.org/*", "webRequest", "tabs"],
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
