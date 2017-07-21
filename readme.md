@@ -1,0 +1,2 @@
+# 0wikipedia
+Türkiye'de wikipedia.org adresi engelli olduğu için, ziyaret etmek istediğiniz sayfa adresinin başına 0 ekleyerek wikipedia'ya erişmeye devam edebilirsiniz. Bu eklenti, adresin başına 0 ekleme işlemini otomatik olarak yapar. 
