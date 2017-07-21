@@ -4,8 +4,14 @@ window.browser = (function () {
     window.chrome;
 })();
 
-browser.webRequest.onBeforeRequest.addListener((request) => {
-    const newUrl = request.url.replace('wikipedia.org', '0wikipedia.org');
-    console.log(newUrl);
-    browser.tabs.update({ url: newUrl });
-}, {urls: ["*://*.wikipedia.org/*"], types: ["main_frame"]});
+function redirect (requestDetails) {
+    return {
+        redirectUrl: requestDetails.url.replace("wikipedia.org", "0wikipedia.org")
+    }
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+    redirect,
+    {urls: ["*://*.wikipedia.org/*"], types: ["main_frame"]},
+    ["blocking"]  
+);
